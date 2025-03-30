@@ -1,0 +1,24 @@
+Vorgehensweise (bishereige erledigte Schritte)
+System: Ubuntu Linux
+Hinweis: Teilweise wurden/werden Annahmen getroffen (insbesondere bei Erklärungsversuchen für angetroffene Probleme).
+Deshalb vorbehaltlich eventueller Fehler und Falschaussagen.
+
+- Installieren von Xampp. Download von offizieller Webseite.
+- Üperprüfen, ob Xampp funktioniert: UI von Xampp gestartet. --> Links in der UI funktinieren nicht.
+- Es scheint ein Berechtigungsproblem (lt. ChatGPT) zu geben. Konnte nicht gelöst werden. Die UI kann nicht als sudo 
+  (mit root-Rechten) geöffnen werden (Warum?) und ohne funktioneren die Links nicht.
+- Stattdessen lokale Serverumgebung im Terminal gestaret --> Funktioniert. Localhost im Browser geöffnet --> Funktioniert. 
+- Node.js und npm mithilfe des Paketmanagers Snap installiert (nicht apt, da hier alte Version).
+- Composer (PHP-Paketmanager) Systemweit mit apt installiert.
+- Für das Projekt "Mitarbeitertabelle" ein github-repo online erstellt und lokal mit SSH-Verbindung geklont.
+- In dem geklonten repo mit dem Composer das Laravel-Projekt "Mitarbeitertabelle" angelegt.
+- Meldung vom Terminal: ext-xml fehlt auf dem System --> überprüft, ob die XML-Erweiterung existiert: In Xampp ja,
+  aber nicht im Laravel-Projekt (?).
+- Die PHP-Version von Xampp für das Projekt und Systemweit zugrund gelegt
+- Laravel-Projekt neu angelegt. XML-Fehler taucht nicht mehr auf, dafür fehlt wohl SQL-Erweiterung.
+- Laravel hat wohl falsch bzw. gar keine Datenbank genutz (Was beduetet das und ist das relevant für mein Projekt?)
+- In der .env-Date im Laravel-Projekt explizit den Speicherort der gedownloadeten Datenbankdatei eingegeben
+  (Warum muss ich das überhaupt machen? Alle Dateien wurden doch vom Composer in einem Paket gedownloadet, warum
+  muss ich unter diesen Dateien manuell noch eine Verknüpfung herstellen?)
+- Danach Cache im Projekt gelöscht --> sollte jetzt funktionieren (Die Probleme bei Laravel mithilfe ChatGPT gelöst,
+  aber das Problem mit der Datenbanktdatei und was der Cache damit zu tun hat ist mir nicht klar?!?!?)
