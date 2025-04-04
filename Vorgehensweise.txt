@@ -22,3 +22,9 @@ Deshalb vorbehaltlich eventueller Fehler und Falschaussagen.
   muss ich unter diesen Dateien manuell noch eine Verknüpfung herstellen?)
 - Danach Cache im Projekt gelöscht --> sollte jetzt funktionieren (Die Probleme bei Laravel mithilfe ChatGPT gelöst,
   aber das Problem mit der Datenbanktdatei und was der Cache damit zu tun hat ist mir nicht klar?!?!?)
+- Folgendes festgetsellt: Es soll nicht die von Laravel bereitsgetsellte Datenbank SQlite genutzt werden, sondern
+  die von Xampp 
+- In der .env Datei entsprechend die Verknüpfung zur Datenbank angepasst (läuft irgendwie über localhost?! Also ich 
+  musste statt einem Dateipfad den Database-Host und Port eingeben.)
+- Via Migrations eine neue Tabelle "create_employees_table" erstellt (Warum nicht einfach "employees"? Soll wohl
+  konvention sein)
